@@ -1,0 +1,14 @@
+display_name: Area Intrusion Detection
+desc: Designed for detecting intrusions of individuals into prohibited or dangerous areas.;Intrusion areas are polygons and can be marked with multiple polygonal areas.;Clear images required for discerning individual features; people targets should not be smaller than 5% of the screen size.;Optimal recognition distance is less than 20 meters (2 million @ 6mm).;Alerts are triggered when the center point of the person's feet enters the intrusion area (default) (the judgment point can be either the center point of the body or the center point between the feet of the person).
+group_name: Personnel Management Algorithm
+model:
+  custom_person:
+    label:
+      class2label:
+        0: person
+      label_map:
+        person: Person
+      label2color:
+        Person: [ 0, 255, 0 ]
+alert_label: [ ]
+process_time: 10

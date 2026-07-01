@@ -1,0 +1,103 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 5,
+            "length": 3,
+            "threshold": 2
+        },
+        "bbox": {
+            "polygons": [],
+            "lines": []
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "general",
+        "model_args": {
+            "custom_fog_classify": {
+                "conf_thres": 0.6
+            }
+        },
+        "reserved_args": {
+            "display_name": "Rain and Fog Recognition",
+            "sound_text": "Rain and Fog Alert",
+			"extra_model": {
+				"custom_fog_classify": 1
+			}
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "Alarm Interval",
+                "unit": "Second",
+                "tooltip": "Used to set the alarm frequency. For example, setting it to 5 seconds means that after an alarm is triggered by the algorithm under this camera, no further alarms will be generated within the next 5 seconds.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "Alarm Window Length",
+                "unit": "Times",
+                "tooltip": "The judgment cycle for alarm events. For example, setting it to 5 times (seconds) means that the system needs to analyze for 5 consecutive seconds before deciding whether to trigger an alarm. If you want the alarm to be more sensitive, this value can be reduced, but it may lead to more false alarms.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "Alarm Threshold",
+                "unit": "Times",
+                "tooltip": "Usually used together with the alarm window length. For example, if the alarm window length is set to 5 seconds and the alarm threshold is set to 3 seconds, it means that within the 5-second time window, if the algorithm detects 3 seconds of hits, an alarm will be triggered.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "sound_text": {
+                "label": "Browser Play",
+                "type": "text",
+                "maxLength": 20
+            }
+        },
+        "bbox": {
+            "polygons": {
+                "exits": "optional",
+                "max": -1,
+                "edge": -1
+            }
+        },
+        "model_args": {
+            "custom_fog_classify": {
+                "conf_thres": {
+                    "label": "Rain and fog recognition confidence",
+                    "unit": "",
+					"tooltip": "A high confidence value indicates that the model considers the rain and fog features in the image to be clear and accurate. A low confidence value indicates that the model has less confidence in the rain and fog recognition result, possibly considering the rain and fog features in the image to be unclear or inaccurate, with a risk of misidentification.",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}

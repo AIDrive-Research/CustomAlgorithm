@@ -1,0 +1,103 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 5,
+            "length": 3,
+            "threshold": 2
+        },
+        "bbox": {
+            "polygons": [],
+            "lines": []
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "general",
+        "model_args": {
+            "custom_fog_classify": {
+                "conf_thres": 0.6
+            }
+        },
+        "reserved_args": {
+            "display_name": "雨雾识别",
+            "sound_text": "雨雾识别告警",
+			"extra_model": {
+				"custom_fog_classify": 1
+			}
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "告警间隔",
+                "unit": "秒",
+                "tooltip": "用于设置告警频率。例：设置5秒，则本次该摄像头下的该算法告警后，5秒内则不再产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "告警窗口长度",
+                "unit": "次",
+                "tooltip": "告警事件的判断周期。例：设置5次（秒），则需要连续分析5次（秒），才能决定是否告警。如果想要告警产生的更灵敏一些，该数值可以变小，但是可能会引发更多的误报。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "告警阈值",
+                "unit": "次",
+                "tooltip": "通常和告警窗口长度一起使用，如告警窗口长度设置5次（秒），告警阈值设置未3次（秒），则代表在5次（秒）的时间窗口内，只要算法识别到3次（秒）命中，则产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "sound_text": {
+                "label": "浏览器语音播报",
+                "type": "text",
+                "maxLength": 20
+            }
+        },
+        "bbox": {
+            "polygons": {
+                "exits": "optional",
+                "max": -1,
+                "edge": -1
+            }
+        },
+        "model_args": {
+            "custom_fog_classify": {
+                "conf_thres": {
+                    "label": "雨雾识别置信度",
+                    "unit": "",
+					"tooltip": "高置信度值表示模型认为该图像中的雨雾特征是明显且准确的。低置信度值表示模型对雨雾识别结果的可靠性较低，可能认为图像中的雨雾特征不太明显或不准确，存在误识别的风险。",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}

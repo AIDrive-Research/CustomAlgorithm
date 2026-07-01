@@ -1,0 +1,100 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 5,
+            "length": 5,
+            "threshold": 3
+        },
+        "bbox": {
+            "polygons": [],
+            "lines": []
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "general",
+        "model_args": {
+            "custom_segment": {
+                "conf_thres": 0.5
+            }
+        },
+        "reserved_args": {
+            "display_name": "人体分割",
+            "sound_text": "人体分割告警"
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "告警间隔",
+                "unit": "秒",
+                "tooltip": "用于设置告警频率。例：设置5秒，则本次该摄像头下的该算法告警后，5秒内则不再产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "告警窗口长度",
+                "unit": "次",
+                "tooltip": "告警事件的判断周期。例：设置5次（秒），则需要连续分析5次（秒），才能决定是否告警。如果想要告警产生的更灵敏一些，该数值可以变小，但是可能会引发更多的误报。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "告警阈值",
+                "unit": "次",
+                "tooltip": "通常和告警窗口长度一起使用，如告警窗口长度设置5次（秒），告警阈值设置未3次（秒），则代表在5次（秒）的时间窗口内，只要算法识别到3次（秒）命中，则产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "sound_text": {
+                "label": "浏览器语音播报",
+                "type": "text",
+                "maxLength": 20
+            }
+        },
+        "bbox": {
+            "polygons": {
+                "exits": "optional",
+                "max": -1,
+                "edge": -1
+            }
+        },
+        "model_args": {
+            "custom_segment": {
+                "conf_thres": {
+                    "label": "人体分割置信度",
+                    "unit": "",
+					"tooltip": "指将图像中的人体区域从背景或其他物体中分离出来，而“置信度”则代表模型对分割结果的准确性或可靠性的判断。高置信度表示模型对检测到的人体区域非常有信心，认为该区域分割结果非常准确，且与实际情况高度一致。低置信度表示模型对人体区域的分割结果信心较低，模型可能认为该分割结果不太可靠，可能存在误分割或漏分割的风险。",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}

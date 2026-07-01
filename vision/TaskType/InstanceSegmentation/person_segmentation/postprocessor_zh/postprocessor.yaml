@@ -1,0 +1,14 @@
+display_name: 人体分割
+desc: 画面可分分辨人体特征;人体不小于画面大小5%;识别距离小于10m最佳（200万@6mm）
+group_name: 人员管理
+model:
+  custom_segment:
+    label:
+      class2label:
+        0: person  
+      label_map:
+        person: 人
+      label2color:
+        人: [0, 255, 0]        
+alert_label: [ 人 ]
+process_time: 100

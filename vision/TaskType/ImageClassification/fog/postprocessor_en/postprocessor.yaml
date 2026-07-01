@@ -1,0 +1,13 @@
+display_name: Rain and Fog Recognition
+desc: Applicable to outdoor rain and fog recognition.
+group_name: Industry-Specific Customized Algorithm
+model:
+  custom_fog_classify:
+    inactive: true
+    label:
+      class2label:
+        0: fog
+        1: normal
+        2: rain
+alert_label: [ fog, rain ]
+process_time: 10

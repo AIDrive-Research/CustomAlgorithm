@@ -1,0 +1,95 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+	    "interval": 0,
+            "length": 1,
+            "threshold": 1
+        },
+        "bbox": {
+            "polygons": [],
+            "lines": []
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "cross_line_counting",
+        "model_args": {
+            "custom_person_demo": {
+                "conf_thres": 0.4
+            }
+        },
+        "reserved_args": {
+            "display_name": "People Counting(Demo)",
+            "sound_text": "People Counting Alert",
+            "strategy": "center"
+        }
+    },
+    "renderParams": {
+        "alert_window": {},
+        "reserved_args": {
+            "strategy": {
+                "hide": true,
+                "label": "Detection Strategy",
+                "tooltip": "Selection of the detection box judgment point. Center: The decision is made based on the center point of the detection box to determine if the object crosses the line. Top, Bottom, Left, Right: These refer to using the midpoint of the top, bottom, left, and right edges of the detection box to determine if the object crosses the line.",
+                "type": "select",
+                "options": [{
+                        "label": "Top",
+                        "value": "top"
+                    }, {
+                        "label": "Center",
+                        "value": "center"
+                    }, {
+                        "label": "Bottom",
+                        "value": "bottom"
+                    }, {
+                        "label": "Left",
+                        "value": "left"
+                    }, {
+                        "label": "Right",
+                        "value": "right"
+                    }
+                ]
+            },
+            "sound_text": {
+                "label": "Browser Play",
+                "type": "text",
+                "maxLength": 20
+            }
+        },
+        "bbox": {
+            "polygons": {
+                "exits": "optional",
+                "max": -1,
+                "edge": -1
+            },
+            "lines": {
+                "exits": "must",
+                "max": -1,
+                "cross": true
+            }
+        },
+        "model_args": {
+            "custom_person_demo": {
+                "conf_thres": {
+                    "label": "Human body detection confidence",
+                    "unit": "",
+					"tooltip": "If high detection accuracy is required and you want to avoid too many false positives, you can raise the confidence threshold. If the application scenario requires detecting as many humans as possible, you can choose a lower confidence threshold. This will make the system more likely to consider an area as a human, thus improving the recall rate, but it may also lead to more false positives.",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}

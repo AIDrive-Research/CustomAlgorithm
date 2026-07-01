@@ -1,0 +1,8 @@
+custom_person_demo:
+  type: custom_detect
+  args:
+    conf_thres: 0.1
+    img_size: 640
+    nms_thres: 0.45
+  infer_time: 60
+  

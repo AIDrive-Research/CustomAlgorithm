@@ -1,0 +1,7 @@
+custom_segment:
+  type: custom_segment_yolov11  
+  args:
+    conf_thres: 0.1
+    img_size: 640
+    nms_thres: 0.45
+  infer_time: 200

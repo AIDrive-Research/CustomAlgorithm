@@ -1,0 +1,124 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 5,
+            "length": 5,
+            "threshold": 3
+        },
+        "bbox": {
+            "polygons": [],
+            "lines": []
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "general",
+        "model_args": {
+            "custom_person": {
+                "conf_thres": 0.65
+            }
+        },
+        "reserved_args": {
+            "display_name": "区域入侵",
+            "sound_text": "区域入侵告警",
+            "strategy": "bottom"
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "告警间隔",
+                "unit": "秒",
+                "tooltip": "用于设置告警频率。例：设置5秒，则本次该摄像头下的该算法告警后，5秒内则不再产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "告警窗口长度",
+                "unit": "次",
+                "tooltip": "告警事件的判断周期。例：设置5次（秒），则需要连续分析5次（秒），才能决定是否告警。如果想要告警产生的更灵敏一些，该数值可以变小，但是可能会引发更多的误报。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "告警阈值",
+                "unit": "次",
+                "tooltip": "通常和告警窗口长度一起使用，如告警窗口长度设置5次（秒），告警阈值设置未3次（秒），则代表在5次（秒）的时间窗口内，只要算法识别到3次（秒）命中，则产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "strategy": {
+                "hide": true,
+                "label": "检测策略",
+                "tooltip": "检测框判断点选择。中心，表示利用检测框中心点判断是否在检测区域内；顶部、底部、左侧、右侧，分别表示利用检测框上边缘中点、下边缘中点、左侧边中点、右侧边中点判断是否在检测区域内。",
+                "type": "select",
+                "options": [{
+                        "label": "顶部",
+                        "value": "top"
+                    }, {
+                        "label": "中心",
+                        "value": "center"
+                    }, {
+                        "label": "底部",
+                        "value": "bottom"
+                    }, {
+                        "label": "左侧",
+                        "value": "left"
+                    }, {
+                        "label": "右侧",
+                        "value": "right"
+                    }
+                ]
+            },
+            "sound_text": {
+                "label": "浏览器语音播报",
+                "type": "text",
+                "maxLength": 20
+            }
+        },
+        "bbox": {
+            "polygons": {
+                "exits": "must",
+                "max": -1,
+                "edge": -1
+            }
+        },
+        "model_args": {
+            "custom_person": {
+                "conf_thres": {
+                    "label": "人体检测置信度",
+                    "unit": "",
+					"tooltip": "如果对检测精度要求较高，并且不希望过多的误报，可以将置信度阈值提高。如果应用场景中要求尽可能多地检测到人体，可以选择较低的置信度阈值。这将使得系统更容易认为某个区域是人体，从而提高召回率，但也可能带来更多的误报。",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}

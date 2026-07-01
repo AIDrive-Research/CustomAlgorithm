@@ -1,0 +1,14 @@
+display_name: Person Segmentation
+desc: The image should clearly show human features; the person occupies at least 5% of the frame; the optimal recognition distance is less than 10 meters (2 MP @ 6mm).
+group_name: Personnel Management Algorithm
+model:
+  custom_segment:
+    label:
+      class2label:
+        0: person  
+      label_map:
+        person: Person
+      label2color:
+        Person: [0, 255, 0]        
+alert_label: [ Person ]
+process_time: 100

@@ -1,0 +1,14 @@
+display_name: People Counting(Demo)
+desc: "Designed for counting people and traffic flow statistics in park and mall scenarios.;Requires marking virtual lines and determining the direction of people crossing the line.;Multiple virtual lines can be marked; clear images required for discerning people features.;People targets should not be smaller than 5% of the screen size.;Optimal recognition distance is less than 20 meters (2 million @ 6mm)."
+group_name: Personnel Management Algorithm
+model:
+  custom_person_demo:
+    label:
+      class2label:
+        0: person
+      label_map:
+        person: Person
+      label2color: 
+        Person: [0, 255, 0]
+alert_label: [ ]
+process_time: 30
