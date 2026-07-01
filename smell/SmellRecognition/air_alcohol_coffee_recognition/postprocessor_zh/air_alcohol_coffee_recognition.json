@@ -1,0 +1,89 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 5,
+            "length": 5,
+            "threshold": 3
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "olfaction",
+        "model_args": {
+            "zql_air_alcohol_coffee_recognition": {
+                "conf_thres": 0.55
+            }
+        },
+        "reserved_args": {
+            "display_name": "空气酒精咖啡识别",
+            "sound_text": "检测到异常气味"
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "告警间隔",
+                "unit": "秒",
+                "tooltip": "用于设置告警频率。例如设置5秒，则本次该摄像头下的该算法告警后，5秒内则不再产生告警。",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "告警窗口长度",
+                "unit": "次",
+                "tooltip": "告警事件的判断周期。例如设置5次，则需要连续分析5次，才能决定是否告警。较小的值会使告警更灵敏，但可能增加误报。",
+                "type": "number",
+                "range": {
+                    "min": 1,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "告警阈值",
+                "unit": "次",
+                "tooltip": "在告警窗口长度内，命中次数达到该阈值则产生告警。例如窗口长度5次，阈值3次，表示5次内有3次命中即告警。",
+                "type": "number",
+                "range": {
+                    "min": 1,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "sound_text": {
+                "label": "浏览器语音播报",
+                "type": "text",
+                "maxLength": 50
+            }
+        },
+        "model_args": {
+            "zql_air_alcohol_coffee_recognition": {
+                "conf_thres": {
+                    "label": "识别置信度阈值",
+                    "unit": "",
+                    "tooltip": "模型预测置信度超过此阈值才认为识别有效。建议范围0.5-0.8，值越高越严格。",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}

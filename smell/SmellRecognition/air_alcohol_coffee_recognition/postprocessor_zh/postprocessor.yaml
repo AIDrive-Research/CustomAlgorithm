@@ -1,0 +1,20 @@
+display_name: 空气酒精咖啡识别
+desc: 基于嗅觉传感器的气味识别算法;可识别空气、酒精、咖啡等气味;采用SVM分类模型;通过10个传感器采集数据;置信度阈值可调节;适用于环境监测、安全检测等场景
+group_name: 嗅觉识别
+model:
+  zql_air_alcohol_coffee_recognition:
+    label:
+      class2label:
+        0: air
+        1: alcohol
+        2: coffee
+      label_map:
+        air: 空气
+        alcohol: 酒精
+        coffee: 咖啡
+      label2color:
+        空气: [0, 255, 0]
+        酒精: [255, 0, 0]
+        咖啡: [139, 69, 19]
+alert_label: [酒精, 咖啡]
+process_time: null

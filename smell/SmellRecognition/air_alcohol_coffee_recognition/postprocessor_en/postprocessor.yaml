@@ -1,0 +1,20 @@
+display_name: Air Alcohol Coffee Recognition
+desc: Odor recognition algorithm based on smell sensors;Can identify air, alcohol, coffee and other odors;Uses SVM classification model;Collects data through 10 sensors;Adjustable confidence threshold;Suitable for environmental monitoring, safety detection and other scenarios
+group_name: Odor Recognition
+model:
+  zql_air_alcohol_coffee_recognition:
+    label:
+      class2label:
+        0: air
+        1: alcohol
+        2: coffee
+      label_map:
+        air: Air
+        alcohol: Alcohol
+        coffee: Coffee
+      label2color:
+        Air: [0, 255, 0]
+        Alcohol: [255, 0, 0]
+        Coffee: [139, 69, 19]
+alert_label: [Alcohol, Coffee]
+process_time: null

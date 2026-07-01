@@ -1,0 +1,5 @@
+zql_air_alcohol_coffee_recognition:
+  type: zql_olfaction
+  args:
+    conf_thres: 0.50
+  infer_time: null

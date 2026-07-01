@@ -1,0 +1,89 @@
+{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 5,
+            "length": 5,
+            "threshold": 3
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "olfaction",
+        "model_args": {
+            "zql_air_alcohol_coffee_recognition": {
+                "conf_thres": 0.55
+            }
+        },
+        "reserved_args": {
+            "display_name": "Air Alcohol Coffee Recognition",
+            "sound_text": "Abnormal odor detected"
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "Alert Interval",
+                "unit": "seconds",
+                "tooltip": "Sets the alert frequency. Example: setting 5 seconds means no new alert will be generated within 5 seconds after an alert.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "Alert Window Length",
+                "unit": "times",
+                "tooltip": "The judgment period for alert events. Smaller values make alerts more sensitive but may increase false alarms.",
+                "type": "number",
+                "range": {
+                    "min": 1,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "Alert Threshold",
+                "unit": "times",
+                "tooltip": "An alert is triggered when the number of hits reaches this threshold within the alert window length.",
+                "type": "number",
+                "range": {
+                    "min": 1,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "sound_text": {
+                "label": "Browser Voice Broadcast",
+                "type": "text",
+                "maxLength": 50
+            }
+        },
+        "model_args": {
+            "zql_air_alcohol_coffee_recognition": {
+                "conf_thres": {
+                    "label": "Recognition Confidence Threshold",
+                    "unit": "",
+                    "tooltip": "Recognition is considered valid only when model prediction confidence exceeds this threshold. Recommended range 0.5-0.8.",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    }
+}
