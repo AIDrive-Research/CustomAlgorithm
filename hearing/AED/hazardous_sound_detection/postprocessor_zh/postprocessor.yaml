@@ -1,0 +1,20 @@
+display_name: 危险声音检测
+desc: 适用于任意场景危险声音检测;可识别拍手声、警报声、撞击声、人身异常声音、交通危险音
+group_name: 声音事件
+model:
+  hazardous_sound_detection:
+    label:
+      class2label:
+        0: Blast
+        1: Alarm
+        2: Crash
+        3: Distress
+        4: Skid
+      label_map:
+        Blast: 拍手声
+        Alarm: 警报声
+        Crash: 撞击声
+        Distress: 异常人声
+        Skid: 交通危险音
+alert_label: [ 拍手声, 警报声, 撞击声, 异常人声, 交通危险音 ]
+process_time: null

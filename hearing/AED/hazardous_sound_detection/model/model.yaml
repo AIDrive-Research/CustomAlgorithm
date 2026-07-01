@@ -1,0 +1,5 @@
+hazardous_sound_detection:
+  type: zql_aed
+  args:
+    conf_thres: 0.3
+  infer_time: null

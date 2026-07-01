@@ -18,7 +18,7 @@
     <img alt="GitHub Stars" src="https://img.shields.io/github/stars/AIDrive-Research/CustomAlgorithm" style="height: 20px; vertical-align: middle;">
   </a>
   <a href="https://github.com/AIDrive-Research/CustomAlgorithm/blob/main/LICENSE">
-    <img alt="LICENSE" src="https://img.shields.io/badge/License-Apache%202.0-4299E1?style=flat&border=0" style="height: 20px; vertical-align: middle;">
+    <img alt="LICENSE" src="https://img.shields.io/badge/License-Custom%20Proprietary-4299E1?style=flat&border=0" style="height: 20px; vertical-align: middle;">
   </a>
 </div>
 

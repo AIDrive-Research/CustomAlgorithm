@@ -1,0 +1,20 @@
+display_name: Hazardous Sound Detection
+desc: Suitable for hazardous sound detection in various scenarios; capable of identifying claps, alarms, crashes, distress sounds, and traffic hazard sounds
+group_name: Sound Events
+model:
+  hazardous_sound_detection:
+    label:
+      class2label:
+        0: Blast
+        1: Alarm
+        2: Crash
+        3: Distress
+        4: Skid
+      label_map:
+        Blast: Clap
+        Alarm: Alarm
+        Crash: Crash
+        Distress: Distress
+        Skid: Skid
+alert_label: [ Clap, Alarm, Crash, Distress, Skid ]
+process_time: null

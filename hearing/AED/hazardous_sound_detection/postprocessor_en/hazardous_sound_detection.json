@@ -1,0 +1,90 @@
+﻿{
+    "basicParams": {
+        "alert_window": {
+            "type": "interval_threshold_window",
+            "interval": 0,
+            "length": 1,
+            "threshold": 1
+        },
+        "plan": {
+            "1": [[0, 86400]],
+            "2": [[0, 86400]],
+            "3": [[0, 86400]],
+            "4": [[0, 86400]],
+            "5": [[0, 86400]],
+            "6": [[0, 86400]],
+            "7": [[0, 86400]]
+        },
+        "hazard_level": "",
+        "alg_type": "aed",
+        "model_args": {
+			"hazardous_sound_detection": {
+                "conf_thres": 0.8
+            }
+		},
+        "reserved_args": {
+            "display_name": "Hazardous Sound Detection",
+            "sound_text": "Hazardous sound detection alert"
+        }
+    },
+    "renderParams": {
+        "alert_window": {
+            "interval": {
+                "label": "Alarm Interval",
+                "unit": "seconds",
+                "tooltip": "Sets the alarm frequency. For example, setting it to 5 seconds means no new alarm will be generated within 5 seconds after this algorithm triggers an alarm for the camera.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 99999999
+                }
+            },
+            "length": {
+                "label": "Alarm Window Length",
+                "unit": "times",
+                "tooltip": "The judgment period for alarm events. For example, setting it to 5 times means the system needs 5 consecutive analysis hits before deciding whether to trigger an alarm. Lower values make alarms more sensitive but may increase false alarms.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            },
+            "threshold": {
+                "label": "Alarm Threshold",
+                "unit": "times",
+                "tooltip": "Usually used together with the alarm window length. For example, if the window length is set to 5 and the threshold is set to 3, an alarm is triggered when the algorithm detects 3 hits within the 5-count window.",
+                "type": "number",
+                "range": {
+                    "min": 0,
+                    "step": 1,
+                    "max": 100
+                }
+            }
+        },
+        "reserved_args": {
+            "sound_text": {
+                "label": "Browser Voice Broadcast",
+                "type": "text",
+                "maxLength": 20
+            }
+        },
+        "model_args": {
+			"hazardous_sound_detection": {
+                "conf_thres": {
+                    "label": "Hazardous Sound Confidence",
+                    "unit": "",
+					"tooltip": "Increase the confidence threshold when higher precision and fewer false alarms are required. Use a lower threshold when the scenario requires detecting as many abnormal sounds as possible.",
+                    "type": "number",
+                    "range": {
+                        "min": 0,
+                        "step": 0.01,
+                        "max": 1
+                    }
+                }
+            }
+		}
+    }
+}
+
