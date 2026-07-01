@@ -1,0 +1,56 @@
+Custom Algorithm Tutorial License
+
+Copyright (c) Shandong Zhiquli Artificial Intelligence Technology Co., Ltd.
+(山东智驱力人工智能科技有限公司). All rights reserved.
+
+This repository is published under the GitHub organization AIDrive-Research
+and is proprietary to Shandong Zhiquli Artificial Intelligence Technology
+Co., Ltd., hereinafter referred to as "Zhiquli".
+
+This is not an open source license. No rights are granted except as expressly
+stated in this license.
+
+This repository, including but not limited to its source code, examples,
+documentation, scripts, configuration files, models, model files, and related
+materials, is provided solely for authorized customers to learn, develop,
+test, and deploy custom algorithms exclusively on devices provided, sold,
+leased, or otherwise expressly authorized by Zhiquli.
+
+For the purpose of this license, "authorized customers" means individuals or
+entities that have been expressly authorized by Zhiquli to access or use this
+repository or its materials.
+
+Authorized customers may copy, modify, and use the materials only for the
+purpose of developing and deploying custom algorithms on Zhiquli devices, or
+on platforms, SDKs, software, or services expressly authorized by Zhiquli for
+use with Zhiquli devices.
+
+You may not use the materials, in whole or in part, on any third-party
+hardware, device, platform, SDK, system, software, or service without prior
+written permission from Zhiquli.
+
+You may not use the materials, in whole or in part, to develop, train,
+integrate, commercialize, improve, or support any competing product, service,
+platform, SDK, device, algorithm system, edge AI device, video analysis
+system, or related solution without prior written permission from Zhiquli.
+
+You may not redistribute, sell, sublicense, publish, disclose, transfer,
+share, upload, or otherwise make the materials available to any third party
+without prior written permission from Zhiquli.
+
+You may not remove, obscure, or modify any copyright notice, proprietary
+notice, trademark, or other ownership notice contained in the materials.
+
+Any use of the materials in violation of this license automatically terminates
+the rights granted to you under this license.
+
+The materials are provided "as is", without warranties of any kind, whether
+express or implied. Zhiquli shall not be liable for any damages, losses, or
+claims arising from the use of the materials, except as required by applicable
+law.
+
+Nothing in this license grants any rights to Zhiquli's trademarks, service
+marks, trade names, patents, trade secrets, or other intellectual property
+rights, except as expressly stated in this license.
+
+Zhiquli reserves all rights not expressly granted herein.
