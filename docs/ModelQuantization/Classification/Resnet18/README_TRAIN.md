@@ -5,8 +5,8 @@
    1. Clone repo and install [requirements.txt](./requirements.txt) in a python>=3.8.0 environment, including pytorch>=1.8
 
       ```bash
-      git clone https://github.com/AIDrive-Research/CustomAlgorithm.git
-      cd CustomAlgorithm/docs/ModelQuantization/Classification/Resnet18
+      git clone https://github.com/AIDrive-Research/Custom-Algorithm.git
+      cd Custom-Algorithm/docs/ModelQuantization/Classification/Resnet18
       pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
       ```
 

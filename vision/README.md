@@ -1,6 +1,6 @@
 <div align="center">
 
-[ImageClassification](https://github.com/AIDrive-Research/CustomAlgorithm/tree/main/vision/TaskType/ImageClassification) | [InstanceSegmentation](https://github.com/AIDrive-Research/CustomAlgorithm/tree/main/vision/TaskType/InstanceSegmentation) | [ObjectDetection](https://github.com/AIDrive-Research/CustomAlgorithm/tree/main/vision/TaskType/ObjectDetection) | [ObjectTracking](https://github.com/AIDrive-Research/CustomAlgorithm/tree/main/TaskType/vision/ObjectTracking)
+[ImageClassification](https://github.com/AIDrive-Research/Custom-Algorithm/tree/main/vision/TaskType/ImageClassification) | [InstanceSegmentation](https://github.com/AIDrive-Research/Custom-Algorithm/tree/main/vision/TaskType/InstanceSegmentation) | [ObjectDetection](https://github.com/AIDrive-Research/Custom-Algorithm/tree/main/vision/TaskType/ObjectDetection) | [ObjectTracking](https://github.com/AIDrive-Research/Custom-Algorithm/tree/main/TaskType/vision/ObjectTracking)
 
 </div>
 

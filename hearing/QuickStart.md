@@ -54,7 +54,7 @@ Select the parent directory of the algorithm package to be encrypted, instead of
 For this example, select:
 
 ```text
-CustomAlgorithm/hearing/AED
+Custom-Algorithm/hearing/AED
 ```
 
 <div style="text-align: center;">

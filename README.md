@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <a align="center" href="https://github.com/AIDrive-Research/CustomAlgorithm" target="">
+    <a align="center" href="https://github.com/AIDrive-Research/Custom-Algorithm" target="">
       <img
         width="100%"
         src="docs/assets/banner.png"
@@ -14,10 +14,10 @@
   <a href="https://bbs.aidrive-tech.com/">
     <img alt="BBS" src="https://img.shields.io/badge/BBS-Forum-4299E1?style=flat&logo=discourse&logoSize=14&border=0" style="height: 20px; vertical-align: middle;">
   </a> 
-  <a href="https://github.com/AIDrive-Research/CustomAlgorithm">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/AIDrive-Research/CustomAlgorithm" style="height: 20px; vertical-align: middle;">
+  <a href="https://github.com/AIDrive-Research/Custom-Algorithm">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/AIDrive-Research/Custom-Algorithm" style="height: 20px; vertical-align: middle;">
   </a>
-  <a href="https://github.com/AIDrive-Research/CustomAlgorithm/blob/main/LICENSE">
+  <a href="https://github.com/AIDrive-Research/Custom-Algorithm/blob/main/LICENSE">
     <img alt="LICENSE" src="https://img.shields.io/badge/License-Custom%20Proprietary-4299E1?style=flat&border=0" style="height: 20px; vertical-align: middle;">
   </a>
 </div>
@@ -127,7 +127,7 @@ The overall usage process is as follows:
 ## 📂 Directory Structure
 
 ```text
-CustomAlgorithm/
+Custom-Algorithm/
 ├── vision/              # Vision algorithm module
 ├── hearing/             # Hearing algorithm module
 ├── smell/               # Smell algorithm module
